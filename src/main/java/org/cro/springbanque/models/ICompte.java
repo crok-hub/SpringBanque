@@ -2,7 +2,7 @@ package org.cro.springbanque.models;
 
 public interface ICompte {
 
-	public int getNumero();
+	public String getNumero();
 	public double getSolde();
 	public String getDevise();
 	

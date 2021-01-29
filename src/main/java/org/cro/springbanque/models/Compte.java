@@ -1,12 +1,12 @@
 package org.cro.springbanque.models;
 
 public abstract class Compte implements ICompte {
-	private int numero;
+	private String numero;
 	private double solde;
 	private String devise;
 	
 	@Override
-	public int getNumero() {
+	public String getNumero() {
 		return this.numero;
 	}
 
@@ -25,6 +25,11 @@ public abstract class Compte implements ICompte {
 		this.solde += montant;
 	}
 
+	public boolean equals(ICompte obj) {
+		return this.numero.equals(obj.getNumero());
+	}
+
+	
 	@Override
 	public String toString() {
 		return this.numero + "{" + this.solde + " " + this.devise + "}";
